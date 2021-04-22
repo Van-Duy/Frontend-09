@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 100px;
+}
+
+.row {
+    width: 500px;
+    background-color: orange;
+    margin: auto;
+    font-size: 0;
+}
+
+.col-1, .col-2 {
+    font-size: 16px;
+    color: white;
+    padding: 5px;
+}
+
+.col-1 {
+    width: 30%;
+    background-color: green;
+    display: inline-block;
+    border: 2px solid red;
+}
+
+.col-2 {
+    width: 70%;
+    background-color: blue;
+    display: inline-block;
+    border: 10px solid black;
+}
