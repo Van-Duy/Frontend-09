@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 20px auto;
+    width: 1200px;
+    height: auto;
+}
+
+header{
+    text-align: center;
+    margin: 20px;
+}
+
+div.box{
+    display: inline-block;
+    background-color: black;
+    width: 33%;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+}
+
+.box .box_button{
+    width: 180px;
+    height: 40px;
+    border: 1px solid rgb(175, 248, 106);
+    background-color: transparent;
+    color: white;
+    font-size: large;
+    overflow: hidden;
+    position: relative;
+    transition: border-radius 1s , border  1s , background-color 1s, color 1s ;
+}
+
+.box:first-child .box_button:hover{
+    border: 1px solid rgb(43, 213, 243);
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.box:nth-child(2) .box_button::after{
+    content: '';
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    transition: left 0.7s , color 0.7s , right 0.7s, opacity 0.7s ;
+}
+
+.box:nth-child(2) .box_button:hover{
+    color: rgb(248, 22, 14);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.box:nth-child(2) .box_button:hover::after{
+    left: 0%;
+    right: 0%;
+    opacity: 0.3;
+}
+
+
+.box:last-child .box_button::after{
+    content: '';
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    height: 20px;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    bottom: 100%;
+    transform: translateX(20%) rotate(45deg) ;
+    transition: bottom 0.7s , color 0.7s , right 0.7s, opacity 0.7s , transform 1s ;
+}
+
+.box:last-child .box_button::before{
+    content: '';
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    height: 20px;
+    left: 0;
+    right: 0;
+    bottom: -200%;
+    opacity: 0.7;
+    transform: translateX(-40%) rotate(45deg) ;
+    transition: bottom 0.7s , color 0.7s , right 0.7s, opacity 0.7s , transform 1s ;
+}
+.box:last-child .box_button:hover{
+    -webkit-box-shadow: -1px 4px 41px -8px rgba(12,245,226,0.7);
+    -moz-box-shadow: -1px 4px 41px -8px rgba(12,245,226,0.7);
+    box-shadow: -1px 4px 41px -8px rgba(12,245,226,0.7);
+    color:  rgba(12,245,226,0.7);
+}
+.box:last-child .box_button:hover:before{
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    transform: translateX(20%) rotate(45deg) ;
+}
+.box:last-child .box_button:hover::after{
+    left: 0;
+    right: 0;
+    bottom: -200%;
+    transform: translateX(-40%) rotate(45deg) ;
+}
